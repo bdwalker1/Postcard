@@ -62,7 +62,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ecl-aF-8iL">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="257" y="197" width="110" height="80"/>
+                                    <rect key="frame" x="257" y="224" width="110" height="80"/>
                                 </variation>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tv7-hl-Xev">
@@ -70,7 +70,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="9" y="290" width="358" height="30"/>
+                                    <rect key="frame" x="9" y="317" width="358" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="beginEditTxtName:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="2PZ-bI-3ws"/>
@@ -81,16 +81,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="9" y="341" width="358" height="30"/>
+                                    <rect key="frame" x="9" y="368" width="358" height="30"/>
                                 </variation>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfx-f5-E09">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfx-f5-E09">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="9" y="77" width="375" height="100"/>
+                                    <rect key="frame" x="9" y="96" width="358" height="120"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z61-vK-zPL">
@@ -102,12 +102,21 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="9" y="217" width="237" height="30"/>
+                                    <rect key="frame" x="9" y="244" width="237" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="pressBtnSendMail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PbU-As-z8c"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obw-3D-aOC">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="9" y="72" width="358" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -117,6 +126,7 @@
                                 <exclude reference="OK6-f2-GPe"/>
                                 <exclude reference="zfx-f5-E09"/>
                                 <exclude reference="Z61-vK-zPL"/>
+                                <exclude reference="Obw-3D-aOC"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -126,12 +136,14 @@
                                 <include reference="OK6-f2-GPe"/>
                                 <include reference="zfx-f5-E09"/>
                                 <include reference="Z61-vK-zPL"/>
+                                <include reference="Obw-3D-aOC"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="btnSendMail" destination="Z61-vK-zPL" id="bRJ-Uo-cxv"/>
                         <outlet property="lblMessage" destination="zfx-f5-E09" id="Pg0-ca-NA5"/>
+                        <outlet property="lblName" destination="Obw-3D-aOC" id="6Dg-V8-NuT"/>
                         <outlet property="txtMsg" destination="OK6-f2-GPe" id="VE4-Ww-UoH"/>
                         <outlet property="txtName" destination="tv7-hl-Xev" id="fvo-FO-oFL"/>
                     </connections>

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var lblMessage: UILabel!
+    @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtMsg: UITextField!
     @IBOutlet weak var btnSendMail: UIButton!
@@ -33,8 +34,11 @@ class ViewController: UIViewController {
     
     @IBAction func pressBtnSendMail(sender: UIButton) {
         // Send Mail Actions
+        lblName.text = txtName.text + ","
+        lblName.textColor = UIColor.blueColor()
+        lblName.hidden = false
+        lblMessage.text = txtMsg.text
         lblMessage.textColor = UIColor.greenColor()
-        lblMessage.text = txtName.text + ",\r\n\t" + txtMsg.text
         lblMessage.hidden = false
         txtName.text = ""
         txtMsg.text = ""
