@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pressBtnSendMail(sender: UIButton) {
+        // Send Mail Actions
         lblMessage.textColor = UIColor.greenColor()
         lblMessage.text = txtName.text + ",\r\n\t" + txtMsg.text
         lblMessage.hidden = false
